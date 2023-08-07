@@ -9,7 +9,7 @@ router = APIRouter()
 
 
 @router.get("/api/v1", response_model=VkResponse | VkResponsePosts)
-def api_handler(method: str,
+def vk_methods_api(method: str,
                 request: Request,
                 limit_client_ip: bool = Depends(rate_limit_client_ip),
                 profile: str | None = None,
